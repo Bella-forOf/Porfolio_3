@@ -40,17 +40,23 @@
 .nav .li {
   display: flex;
   text-align: center;
+  gap: 20px;
+  justify-content: space-between;
 }
 
 .nav .li .a {
+  background-color: rgba(50, 50, 50, 0.2);
+  border: 2px solid #fff;
   color: black;
   font-family: helvetica;
   font-size: 1rem;
   padding: 10px;
   text-decoration: none;
   display: flex;
+
   width: 80%;
 }
+
 .name {
   font-size: 1.5rem;
   color: black;
@@ -59,7 +65,7 @@
   object-fit: cover;
   width: 180px;
   height: 180px;
-  border: 5px solid var(--cool-grey);
+  border: 5px solid var black;
   border-radius: 4px;
   padding: 15px;
 }
@@ -78,7 +84,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 33rem;
+  height: 100vh;
   max-width: 100%;
   position: relative;
 }
@@ -121,9 +127,11 @@
 .projects__article {
   width: 90%;
   text-align: center;
-  padding-left: 2rem;
+
   text-decoration: none;
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
+  border: 2px solid black;
+  margin-bottom: 20px;
   &--image {
     width: 80%;
     margin-bottom: 2rem;
@@ -141,6 +149,7 @@
     color: white;
     background-color: black;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    cursor: pointer;
   }
 }
 .n {
