@@ -19,6 +19,7 @@
 .p {
   font-size: 1.4rem;
   margin: 0 0 24px 0;
+  padding: 10px;
 }
 
 .header {
@@ -32,8 +33,19 @@
 
 .nav .ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  // background-color: rgba(29, 40, 41, 0.7);
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  z-index: 3;
   width: 100%;
 }
 
@@ -41,33 +53,35 @@
   display: flex;
   text-align: center;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .nav .li .a {
-  background-color: rgba(50, 50, 50, 0.2);
-  border: 2px solid #fff;
-  color: black;
+  background-color: rgba(36, 25, 25, 0.705);
+  border: 3px solid #fff;
+  color: white;
   font-family: helvetica;
   font-size: 1rem;
   padding: 10px;
   text-decoration: none;
   display: flex;
-
+  font-weight: bold;
   width: 80%;
 }
 
 .name {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: black;
+  font-weight: bold;
 }
 .img-person {
   object-fit: cover;
   width: 180px;
   height: 180px;
-  border: 5px solid var black;
-  border-radius: 4px;
-  padding: 15px;
+  border: 3px solid black;
+  border-radius: 40px;
+  padding: 5px;
+  margin-bottom: 30px;
 }
 .parallas,
 .main,
@@ -101,15 +115,15 @@
 }
 
 .img-uno {
-  background-image: url('https://img.freepik.com/foto-gratis/humedales-vegetacion-pantano-ruta-mammoth-padul-granada-andalucia-espana_1139-1638.jpg?w=1060&t=st=1675809010~exp=1675809610~hmac=12fad19afd9778d1cb43325c3e29c7091293332f0fd125b1a0da89a9b3d3a501');
+  background-image: url('../images/humedales.jpg');
 }
 
 .img-dos {
-  background-image: url('https://img.freepik.com/foto-gratis/crisantemos-coloridos_181624-17258.jpg?w=900&t=st=1675809125~exp=1675809725~hmac=a678bd619141b741b2214c7984e5a5c026c09be97e147559f4ce377e16032fd3');
+  background-image: url('../images/flores.jpg');
 }
 
 .img-tres {
-  background-image: url('https://img.freepik.com/foto-gratis/primer-plano-agua-azul-amanecer_181624-20980.jpg?w=1060&t=st=1675809406~exp=1675810006~hmac=d007bcf301d192db36a483ae3d8031c1e1ec17559be9bf147031af7281544f1c');
+  background-image: url('../images/mar.jpg');
 }
 
 .texto {
@@ -125,25 +139,32 @@
   margin-bottom: 10rem;
 }
 .projects__article {
-  width: 90%;
+  width: 280px;
+  height: 280px;
   text-align: center;
-
+  padding: 10px;
   text-decoration: none;
-  padding-bottom: 1rem;
+  padding-bottom: 0rem;
   border: 2px solid black;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  margin-left: 50px;
+
   &--image {
     width: 80%;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
   }
   &--description {
     text-decoration: none;
-    font-size: 1.2rem;
+    padding: 2px;
+    font-size: 0.8rem;
+  }
+  &--description2 {
+    display: none;
   }
   &--button {
-    margin: 30px;
-    padding: 0.375rem 0.75rem;
+    margin-top: 10px;
+    padding: 5px;
     border: 1px solid black;
     border-radius: 0.5rem;
     color: white;
@@ -152,7 +173,103 @@
     cursor: pointer;
   }
 }
+.div-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 .n {
   text-decoration: none;
   color: black;
+}
+.texto3 {
+  padding: 5%;
+  width: 90%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media all and (min-width: 768px) {
+  .name {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .texto {
+    flex-direction: row;
+  }
+  .p {
+    padding: 70px;
+  }
+  .name2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  .ul1 {
+    margin-right: 3rem;
+    margin-left: 3rem;
+    font-size: 1.4rem;
+  }
+  .texto3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    font-size: 1rem;
+  }
+  .projects__article {
+    &--description {
+      font-size: 0.8rem;
+    }
+  }
+}
+@media all and (min-width: 1200px) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .texto {
+    padding: 50px;
+  }
+  .p {
+    padding: 180px;
+  }
+  .name {
+    font-size: 3.5rem;
+  }
+  .name2 {
+    font-size: 4rem;
+  }
+  .ul1 {
+    font-size: 2.5rem;
+  }
+  .texto3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media all and (min-width: 1500px) {
+  .projects__article {
+    width: 350px;
+    height: 350px;
+    &--description {
+      font-size: 1.2rem;
+    }
+  }
+  .name {
+    font-size: 5rem;
+  }
+  .texto {
+    padding: 150px;
+  }
+  .img-person {
+    width: 280px;
+    height: 280px;
+  }
+  .p {
+    font-size: 2rem;
+  }
+  .name2 {
+    font-size: 6rem;
+  }
 }
