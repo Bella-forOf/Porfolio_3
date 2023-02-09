@@ -242,8 +242,6 @@
 }
 @media all and (min-width: 1500px) {
   .projects__article {
-    width: 350px;
-    height: 350px;
     &--description {
       font-size: 1.2rem;
     }
@@ -252,7 +250,7 @@
     font-size: 5rem;
   }
   .texto {
-    padding: 150px;
+    // padding: 150px;
   }
   .img-person {
     width: 280px;
@@ -291,6 +289,23 @@
       padding: 3rem;
       padding-bottom: 2rem;
       margin-top: 0px;
+    }
+  }
+}
+.footer {
+  background-color: white;
+  height: 30px;
+  border-top: 1px solid;
+  // padding-top: 2.5rem;
+  // padding-bottom: 1rem;
+
+  &__text {
+    color: black;
+    text-align: center;
+    padding: 25px;
+
+    @media (min-width: 768px) {
+      font-size: 1rem;
     }
   }
 }
